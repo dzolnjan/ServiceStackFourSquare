@@ -1,12 +1,9 @@
-﻿using System;
-using System.IO;
-using ServiceStack.ServiceInterface;
+﻿using ServiceStack.ServiceInterface;
 using ServiceStack.Text;
 using ServiceStackFourSquare.Interface.Support;
-using ServiceStackFourSquare.Model.FFCategory;
 using ServiceStackFourSquare.Model.FFVenue;
 using ServiceStackFourSquare.Model.Service;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 

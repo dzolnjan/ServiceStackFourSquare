@@ -9,7 +9,7 @@ using System.Net;
 
 namespace ServiceStackFourSquare.Interface
 {
-    [Authenticate]
+    //[Authenticate]
     public class CategoryService : Service
     {
         public CategoriesResponse Get(Categories request)

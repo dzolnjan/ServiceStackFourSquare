@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryService.cs" />
+    <Compile Include="Support\PocoHelper.cs" />
     <Compile Include="Support\FFAuth.cs" />
     <Compile Include="VenueService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

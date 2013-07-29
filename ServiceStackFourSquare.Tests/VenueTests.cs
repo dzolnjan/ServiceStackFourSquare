@@ -1,7 +1,7 @@
-﻿using System;
-using NUnit.Framework;
-using ServiceStack.Service;
+﻿using NUnit.Framework;
 using ServiceStack.ServiceClient.Web;
+using ServiceStackFourSquare.Interface.Support;
+using ServiceStackFourSquare.Model.FFVenue;
 using ServiceStackFourSquare.Model.Service;
 using ServiceStackFourSquare.Tests.Support;
 using System.Linq;
@@ -90,5 +90,21 @@ namespace ServiceStackFourSquare.Tests
             // assert
             Assert.That(response.Venues.meta.code, Is.EqualTo(400));
         }
+
+        [Test]
+        public void Use_RestClient_To_Send_Poco_And_Receive_Poco()
+        {
+            // arrange
+            var restClient = TestHelpers.CreateRestClient(true);
+            var ffRequestPoco = new FFRequestVenueSearchPOCO { near = "empire state building", radius = 1609 };
+
+            // act
+            var pocoToUrl = ffRequestPoco.ToFFUrl();
+            var response = restClient.Get<FFVenueRoot>("https://api.foursquare.com/v2/venues/search" + pocoToUrl);  // 1 mile ~ 1609 meters
+
+            // assert
+            Assert.That(response.response.venues.ToList().Count, Is.GreaterThan(0));
+        }
+
     }
 }

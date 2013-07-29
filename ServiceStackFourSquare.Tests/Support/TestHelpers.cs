@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ServiceStack.Service;
-using ServiceStack.ServiceClient.Web;
+﻿using ServiceStack.ServiceClient.Web;
 
 namespace ServiceStackFourSquare.Tests.Support
 {
@@ -23,7 +17,7 @@ namespace ServiceStackFourSquare.Tests.Support
             return _appHost;
         }
 
-        public static IRestClient CreateRestClient(bool authenticated)
+        public static JsonServiceClient CreateRestClient(bool authenticated)
         {
             return authenticated ?
                 new JsonServiceClient(AppHostTest.ListeningOn)

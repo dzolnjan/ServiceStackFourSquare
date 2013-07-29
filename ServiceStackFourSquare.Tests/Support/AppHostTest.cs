@@ -1,5 +1,4 @@
-﻿using System;
-using Funq;
+﻿using Funq;
 using ServiceStack.CacheAccess;
 using ServiceStack.CacheAccess.Providers;
 using ServiceStack.ServiceInterface;

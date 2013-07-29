@@ -1,7 +1,5 @@
 ﻿using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface.ServiceModel;
-using ServiceStackFourSquare.Model.FFCategory;
-using System.Collections.Generic;
 using ServiceStackFourSquare.Model.FFVenue;
 
 namespace ServiceStackFourSquare.Model.Service

@@ -63,6 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FFExplore\Class1.cs" />
+    <Compile Include="FFVenue\FFRequestVenueSearchPOCO.cs" />
     <Compile Include="Service\Category.cs" />
     <Compile Include="FFCategory\FFCategoryRoot.cs" />
     <Compile Include="FFVenue\FFVenueRoot.cs" />

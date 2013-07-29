@@ -1,6 +1,4 @@
-﻿using System;
-using NUnit.Framework;
-using ServiceStack.Service;
+﻿using NUnit.Framework;
 using ServiceStack.ServiceClient.Web;
 using ServiceStackFourSquare.Model.Service;
 using ServiceStackFourSquare.Tests.Support;
@@ -17,26 +15,26 @@ namespace ServiceStackFourSquare.Tests
             _appHost = TestHelpers.Init();
         }
 
-        [Test]
-        public void Fail_If_Not_Authenticated()
-        {
-            // arrange
-            var restClient = TestHelpers.CreateRestClient(false);
-            var responseStatus = 200;
+        //[Test]
+        //public void Fail_If_Not_Authenticated()
+        //{
+        //    // arrange
+        //    var restClient = TestHelpers.CreateRestClient(false);
+        //    var responseStatus = 200;
 
-            // act
-            try
-            {
-                var response = restClient.Get<CategoriesResponse>("categories");
-            }
-            catch (WebServiceException ex)
-            {
-                responseStatus = ex.StatusCode;
-            }
+        //    // act
+        //    try
+        //    {
+        //        var response = restClient.Get<CategoriesResponse>("categories");
+        //    }
+        //    catch (WebServiceException ex)
+        //    {
+        //        responseStatus = ex.StatusCode;
+        //    }
 
-            // assert
-            Assert.That(responseStatus, Is.EqualTo(401));
-        }
+        //    // assert
+        //    Assert.That(responseStatus, Is.EqualTo(401));
+        //}
 
         [Test]
         public void Can_Get_List_Of_All_Categories_Tree()
