@@ -12,6 +12,7 @@ namespace ServiceStackFourSquare.StandAloneHost
             appHost.Start(listeningOn);
 
             Console.WriteLine("AppHost Created at {0}, listening on {1}", DateTime.Now, listeningOn);
+            Console.WriteLine("Open browser and go to http://localhost:1337/categories");
             Console.ReadKey();
         }
     }
