@@ -1,0 +1,5 @@
+﻿
+namespace ServiceStackFourSquare.Model.FFExplore
+{
+
+}
